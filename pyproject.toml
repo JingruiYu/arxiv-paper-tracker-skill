@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "arxiv-paper-tracker"
+version = "0.1.0"
+description = "Configurable arXiv paper tracker that generates Markdown digests and optional email notifications."
+readme = "README.md"
+requires-python = ">=3.10"
+license = {file = "LICENSE"}
+authors = [{name = "Jingrui Yu"}]
+dependencies = [
+  "arxiv>=2.1.0",
+  "PyYAML>=6.0",
+]
+
+classifiers = [
+  "License :: OSI Approved :: Apache Software License",
+]
+
+[project.scripts]
+arxiv-paper-tracker = "arxiv_paper_tracker.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["arxiv_paper_tracker*"]

@@ -1,0 +1,23 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+venv/
+
+# Local user configuration and runtime state
+config.yaml
+config.yml
+config.json
+*.local.yaml
+*.local.yml
+*.local.json
+.arxiv_tracker_state.json
+
+# Generated outputs
+outputs/
+digests/
+*.log

@@ -1,0 +1,45 @@
+# arxiv-paper-tracker example configuration.
+# Copy this file to config.yaml, then edit it for your own research interests.
+
+queries:
+  authors:
+    - Pollefeys
+    - Scaramuzza
+  categories:
+    - cs.CV
+    - cs.RO
+  keywords:
+    - SLAM
+    - 3D reconstruction
+    - neural rendering
+    - embodied AI
+  institutions:
+    - NVIDIA
+    - Meta
+
+limits:
+  max_results_per_query: 20
+  days_back: 7
+
+filters:
+  include_keywords: []
+  exclude_keywords: []
+
+output:
+  format: markdown
+  max_abstract_chars: 900
+
+state:
+  path: .arxiv_tracker_state.json
+
+email:
+  enabled: false
+  smtp_host: smtp.example.com
+  smtp_port: 465
+  use_ssl: true
+  username: your_email@example.com
+  password: ""
+  sender: your_email@example.com
+  receivers:
+    - receiver@example.com
+  subject: "arXiv paper digest"
